@@ -14,7 +14,7 @@ This specific implementation of the Observer interface reacts to notifications f
 
 The ConcreteObserver stores state that should remain consistent with the subject's state and implements the updating interface of the Observer to keep its state aligned with the subject’s.
 
-In our example, `AdminNotifier`, `Display` and `NotFoundHandler` are the concrete handlers.
+In our example, `AdminNotifier` and `Display` are the concrete handlers.
 
 ### 3. Subject
 The Subject acts as the core of the pattern and is responsible for maintaining a list of its observers. It provides an interface for attaching (registering) and detaching (unregistering) Observer objects, allowing dynamic management of observers.
