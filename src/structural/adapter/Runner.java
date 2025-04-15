@@ -6,9 +6,9 @@ public class Runner {
         AudioPlayer audioPlayer = new AudioPlayer();
         audioPlayer.play("it_really_whips.mp3");
 
-        VideoPlayer videoPlayer = new VideoPlayer(audioPlayer);
-        videoPlayer.play("test.mp4");
-        videoPlayer.play("test1.mp4");
-        videoPlayer.play("test2.mp4");
+        Player player = new VideoPlayer(audioPlayer);
+        player.play("test.mp4");
+        player.play("test1.mp4");
+        player.play("test2.mp4");
     }
 }
