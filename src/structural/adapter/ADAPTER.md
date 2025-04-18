@@ -2,6 +2,14 @@
 
 The Adapter Pattern is a structural design pattern that allows incompatible interfaces to work together. It acts as a bridge between two incompatible interfaces by converting the interface of one class into another that a client expects.
 
+In this example, we have implemented a media player system where:
+
+- `MediaPlayer` is the **Target** interface expected by the client.
+- `AdvancedMediaPlayer` is the **Adaptee**, which has an incompatible interface.
+- `MediaAdapter` is the **Adapter**, which bridges the gap between the `MediaPlayer` and `AdvancedMediaPlayer`.
+
+The `MediaPlayerImpl` class uses an adapter to handle 'mp4' file types. For 'mp3' files, it processes them directly without needing the adapter. Essentially, the adapter allows `MediaPlayerImpl` to add support for playing 'mp4' files by leveraging the existing `AdvancedMediaPlayer` class (the adaptee).
+
 ---
 
 ## Directory Structure
@@ -9,32 +17,31 @@ The Adapter Pattern is a structural design pattern that allows incompatible inte
 ```
 /DesignPatterns/src/structural/adapter/
 │
-├── ADAPTER.md                # Documentation for the Adapter Pattern
 ├── Runner.java               # The client that uses the Target interface
-├── Player.java               # The interface expected by the client
-├── AudioPlayer.java          # The existing class with an incompatible interface
-└── VideoPlayer.java          # The adapter class that bridges the Target and Adaptee
+├── MediaPlayer.java          # The interface expected by the client
+├── AdvancedMediaPlayer.java  # The existing class with an incompatible interface
+└── MediaAdapter.java         # The adapter class that bridges the Target and Adaptee
 ```
 
 ---
 
-## Components with example
+## Implementation Details
 
-1. **Target [Player.java](./Player.java)**   
-    Defines the domain-specific interface used by the client.
+1. **Target [MediaPlayer.java](./MediaPlayer.java)**  
+     Defines the domain-specific interface used by the client.
 
-2. **Adaptee [AudioPlayer.java](./AudioPlayer.java)**  
-    Contains the existing functionality that needs to be adapted to the Target interface.
+2. **Adaptee [AdvancedMediaPlayer.java](./AdvancedMediaPlayer.java)**  
+     Contains the existing functionality that needs to be adapted to the Target interface.
 
-3. **Adapter [VideoPlayer.java](./VideoPlayer.java)**  
-    Implements the Target interface and translates requests from the client to the Adaptee.
+3. **Adapter [MediaAdapter.java](./MediaAdapter.java)**  
+     Implements the Target interface and translates requests from the client to the Adaptee.
 
 4. **Client [Runner.java](./Runner.java)**  
-    Uses the Target interface to interact with the system.
+     Uses the Target interface to interact with the system.
 
 ---
 
-## Example Code
+## More simple example
 
 ### Target.java
 ```java
