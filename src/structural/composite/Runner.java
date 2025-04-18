@@ -2,15 +2,24 @@ package structural.composite;
 
 public class Runner {
     public static void main(String[] args) {
-        final Component label = new Label(new InnerText("Hello, World!"));
-        final Component input = new Input();
-        final Component button = new Button(new InnerText("Click Me!"));
+        // Create files
+        File textFile = new File("File1.txt", 100);
+        File imageFile = new File("File2.jpg", 200);
 
-        final Panel panel = new Panel();
-        panel.addComponent(label);
-        panel.addComponent(input);
-        panel.addComponent(button);
-        
-        System.out.println(panel.render());
+        // Create a directory and add files to it
+        Directory textDir = new Directory("Text Files");
+        Directory imageDir = new Directory("Image Files");
+
+        // Add files to directories
+        textDir.addComponent(textFile);
+        imageDir.addComponent(imageFile);
+
+        // Create a root directory and add directories to it
+        Directory rootDir = new Directory("Root");
+        rootDir.addComponent(textDir);
+        rootDir.addComponent(imageDir);
+
+        // Show details of the file system
+        rootDir.display("");
     }
 }
