@@ -12,7 +12,6 @@ The Singleton Design Pattern is a creational design pattern that ensures a class
             ├── Singleton.java    // Singleton class
             └── readme.md
 ```
-```
 
 ## Key Features of Singleton
 
