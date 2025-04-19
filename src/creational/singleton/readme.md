@@ -9,7 +9,7 @@ The Singleton Design Pattern is a creational design pattern that ensures a class
 └── src/
     └── creational/
         └── singleton/
-            ├── Singleton.java    // Singleton class
+            ├── Logger.java    // Singleton class
             └── readme.md
 ```
 
@@ -22,6 +22,27 @@ The Singleton Design Pattern is a creational design pattern that ensures a class
 ## Implementation Example
 
 Below is a simple implementation of the Singleton pattern in Java:
+```java
+
+public class Logger {
+    private static Logger instance;
+
+    private Logger() {
+        // Private constructor to prevent instantiation
+    }
+
+    public static synchronized Logger getInstance() {
+        if (instance == null) {
+            instance = new Logger();
+        }
+        return instance;
+    }
+
+    public void log(String message) {
+        System.out.println(message);
+    }
+}
+```
 
 ## Advantages
 
