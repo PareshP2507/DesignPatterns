@@ -59,5 +59,3 @@ public class Logger {
 - Logging
 - Configuration management
 - Database connections
-
-For more details, refer to the `Singleton.java` file in this directory.  

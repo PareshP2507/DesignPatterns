@@ -8,13 +8,13 @@ This repository contains examples and explanations of various design patterns in
 - [Builder Pattern](./src/creational/builder/readme.md)
 
 ### Structural Design Patterns
-- [Adapter Pattern](./src/structural/adapter/ADAPTER.md)
-- [Composite Pattern](./src/structural/composite/COMPOSITE.md)
-- [Decorator Pattern](./src/structural/decorator/DECORATOR.md)
-- [Facade Pattern](./src/structural/facade/FACADE.md)
-- [Proxy Pattern](./src/structural/proxy/PROXY.md)
+- [Adapter Pattern](./src/structural/adapter/readme.md)
+- [Composite Pattern](./src/structural/composite/readme.md)
+- [Decorator Pattern](./src/structural/decorator/readme.md)
+- [Facade Pattern](./src/structural/facade/readme.md)
+- [Proxy Pattern](./src/structural/proxy/readme.md)
 
 ### Behavioral Design Patterns
-- [Chain of Responsibility Pattern](./src/behavioral/cor/COR.md)
-- [Observer Pattern](./src/behavioral/observer/OBSERVER.md)
-- [Strategy Pattern](./src/behavioral/strategy/STRATEGY.md)
+- [Chain of Responsibility Pattern](./src/behavioral/cor/readme.md)
+- [Observer Pattern](./src/behavioral/observer/readme.md)
+- [Strategy Pattern](./src/behavioral/strategy/readme.md)
