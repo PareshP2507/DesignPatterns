@@ -1,16 +1,45 @@
 # Facade Design Pattern
-The facade pattern is a structural design pattern that provides a simplified inter interface to a complex system of classes, libraries or frameworks.
+
+The facade pattern is a structural design pattern that provides a simplified interface to a complex system of classes, libraries, or frameworks.
+
+---
+
+## File Structure
+
+```
+/DesignPatterns/
+└── src/
+    └── structural/
+        └── facade/
+            ├── HotelService.java
+            ├── AirlineService.java
+            ├── VacationAgencyService.java
+            └── readme.md
+```
+
+---
 
 ## Components
-### 1. Subsystem classes
-In the code, `HotelService` and `AirlineService` are the subsystem classes. Each of these classes has methods like `bookHotel` and `reserve` respectively, which handles the logic of booking hotels and reserving flights.
+
+### 1. Subsystem Classes
+- **HotelService**: Handles hotel booking logic through methods like `bookHotel`.
+- **AirlineService**: Manages flight reservations using methods like `reserve`.
+
 ### 2. Facade
-In the code, `VacationAgencyService` is the facade class which encapsulates the complexity of dealing with `HotelService` and `AirlineService`. It takes necessary parameters from the client and takes care of bookings.
+- **VacationAgencyService**: Acts as the facade class, encapsulating the complexity of `HotelService` and `AirlineService`. It simplifies the process by taking parameters from the client and managing bookings.
 
-## When to use
-- **Simplifying the complex systems**: Provide easy-to-use interface hiding the complex functionality.
-- **Supporting legacy systems**: When integrating the new components with legacy components. Here facade can serve as an intermediator that communicates with legacy systems.
-- **Integrating third-party systems**: If a third party system is complex and requires multiple steps to perfom single operation, a facade can simplify the processes.
+---
 
-## When not to use
-- **Becoming a God object**: If the facade is coupled to almost all the classes of an app, it can make the system more complex than needed.
+## When to Use
+
+- **Simplifying Complex Systems**: Use when you need to provide an easy-to-use interface that hides complex functionality.
+- **Supporting Legacy Systems**: Ideal for integrating new components with legacy systems, acting as an intermediary for communication.
+- **Integrating Third-Party Systems**: Simplifies interactions with third-party systems that require multiple steps for a single operation.
+- **Reducing Coupling**: Helps in reducing direct dependencies between subsystems and clients.
+
+---
+
+## When Not to Use
+
+- **Becoming a God Object**: Avoid using a facade if it becomes tightly coupled to almost all classes in the application, as it can increase complexity instead of reducing it.
+
